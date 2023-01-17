@@ -36,9 +36,9 @@ namespace ADONETHW2
         private void ConnectDatabase()
         {
             IConfigurationRoot configuration = new ConfigurationBuilder()
-.AddJsonFile("jsconfig1.json")
+.AddJsonFile("appsettings.json")
 .Build();
-            string connectionString = configuration.GetConnectionString("db1");
+            string connectionString = configuration.GetConnectionString("Library");
             connection = new SqlConnection(connectionString);
         }
 
